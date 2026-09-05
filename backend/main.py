@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
+from pydantic import BaseModel
+from ai.contradiction_engine import analyze_contradictions
 import os
 
 load_dotenv()
@@ -107,3 +109,10 @@ def get_sales():
             {"name": "Product D", "revenue": 1.7, "growth": 22},
         ]
     }
+class DecisionRequest(BaseModel):
+    decision: str
+
+@app.post("/api/contradictions/analyze")
+def analyze_decision(request: DecisionRequest):
+    result = analyze_contradictions(request.decision)
+    return result
