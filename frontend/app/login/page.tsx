@@ -240,6 +240,12 @@ export default function AuthPage() {
       return
     }
 
+        // Save user info for Topbar
+    localStorage.setItem('nexus_user', JSON.stringify({
+      name: profile.full_name || username,
+      role: loginRole,
+    }))
+
     if (loginRole === 'ceo') router.push('/dashboard/ceo')
     else if (loginRole === 'ca') router.push('/dashboard/finance')
     else if (loginRole === 'manager') router.push('/dashboard/operations')

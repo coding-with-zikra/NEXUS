@@ -1,5 +1,6 @@
 'use client'
 
+import { createClient } from '@/lib/supabase'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import {
@@ -35,6 +36,8 @@ export default function CEODashboard() {
   const [health, setHealth] = useState<any>(null)
   const [alerts, setAlerts] = useState<any[]>([])
   const [greeting, setGreeting] = useState('Good Morning')
+  const [userName, setUserName] = useState('Aarav')
+  const supabase = createClient()
 
   useEffect(() => {
     fetch(`${API}/api/dashboard/health-score`).then(r => r.json()).then(setHealth)
@@ -43,6 +46,17 @@ export default function CEODashboard() {
     if (hour < 12) setGreeting('Good Morning')
     else if (hour < 17) setGreeting('Good Afternoon')
     else setGreeting('Good Evening')
+
+    supabase.auth.getSession().then(async ({ data: sessionData }) => {
+      const user = sessionData.session?.user
+      if (!user) return
+      const meta = user.user_metadata
+      const name = meta?.full_name?.split(' ')[0]
+      if (name) { setUserName(name); return }
+      const { data: profile } = await supabase
+        .from('profiles').select('full_name').eq('id', user.id).single()
+      if (profile?.full_name) setUserName(profile.full_name.split(' ')[0])
+    })
   }, [])
 
   return (
@@ -69,7 +83,7 @@ export default function CEODashboard() {
         />
         <div className="relative z-10">
           <h1 className="text-3xl font-bold text-white">
-            {greeting}, Aarav! 👋
+            {greeting}, {userName}! 👋
           </h1>
           <p className="text-gray-400 text-sm mt-1">
             Here's the complete view of your company.

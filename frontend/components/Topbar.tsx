@@ -10,17 +10,32 @@ export default function Topbar() {
   const [time, setTime] = useState('')
   const supabase = createClient()
 
-  useEffect(() => {
-    supabase.auth.getUser().then(({ data }) => {
-      const meta = data.user?.user_metadata
-      setUserName(meta?.full_name?.split(' ')[0] || 'Aarav')
-      const role = meta?.role || 'ceo'
+    useEffect(() => {
+    // Read from localStorage first (set on login)
+    const stored = localStorage.getItem('nexus_user')
+    if (stored) {
+      const parsed = JSON.parse(stored)
+      setUserName(parsed.name?.split(' ')[0] || 'User')
+      const role = parsed.role
       setUserRole(
         role === 'ceo' ? 'CEO' :
         role === 'ca' ? 'CA / Finance' :
         role === 'manager' ? 'Operations Manager' : 'Employee'
       )
-    })
+    } else {
+      // Fallback to Supabase metadata
+    const stored = localStorage.getItem('nexus_user')
+    if (stored) {
+      const parsed = JSON.parse(stored)
+      setUserName(parsed.name?.split(' ')[0] || 'User')
+      const role = parsed.role
+      setUserRole(
+        role === 'ceo' ? 'CEO' :
+        role === 'ca' ? 'CA / Finance' :
+        role === 'manager' ? 'Operations Manager' : 'Employee'
+      )
+    }
+    }
 
     const updateTime = () => {
       const now = new Date()
