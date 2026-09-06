@@ -116,3 +116,18 @@ class DecisionRequest(BaseModel):
 def analyze_decision(request: DecisionRequest):
     result = analyze_contradictions(request.decision)
     return result
+
+@app.get("/api/auth/lookup/{username}")
+def lookup_username(username: str):
+    from supabase import create_client
+    url = os.getenv("SUPABASE_URL")
+    key = os.getenv("SUPABASE_SECRET_KEY")
+    sb = create_client(url, key)
+    result = sb.table("profiles").select("id, role, email").eq("username", username.lower()).execute()
+    if not result.data:
+        return {"found": False}
+    return {
+        "found": True,
+        "role": result.data[0]["role"],
+        "email": result.data[0].get("email", "")
+    }
