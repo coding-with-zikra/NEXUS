@@ -230,13 +230,14 @@ export default function Topbar() {
               </div>
               <div className="py-1">
                 <button
-                  onClick={() => { router.push('/dashboard/employee'); setShowProfile(false) }}
+                  onClick={() => { router.push('/dashboard/profile'); setShowProfile(false) }}
                   className="w-full flex items-center gap-3 px-4 py-2.5 text-gray-400 hover:text-white hover:bg-[#1a1a2e] transition-colors text-sm"
                 >
                   <User size={14} />
                   My Profile
                 </button>
                 <button
+                  onClick={() => { router.push('/dashboard/settings'); setShowProfile(false) }}
                   className="w-full flex items-center gap-3 px-4 py-2.5 text-gray-400 hover:text-white hover:bg-[#1a1a2e] transition-colors text-sm"
                 >
                   <Settings size={14} />
