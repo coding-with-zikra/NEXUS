@@ -1,3 +1,4 @@
+import AuthGuard from '@/components/AuthGuard'
 import Sidebar from '@/components/Sidebar'
 import Topbar from '@/components/Topbar'
 
