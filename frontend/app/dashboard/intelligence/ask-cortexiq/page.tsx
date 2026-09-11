@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 
 type Message = {
-  role: 'user' | 'nexus'
+  role: 'user' | 'CORTEXIQ'
   text: string
   time: string
   data?: any
@@ -290,7 +290,7 @@ Total machines: **14** | Running: **11** | Maintenance: **2** | Warning: **1**
 
   // DECISION / RECOMMENDATION analysis
   if (q.includes('should') || q.includes('recommend') || q.includes('what to do') || q.includes('action') || q.includes('increase production')) {
-    return `🧠 **NEXUS Strategic Recommendation**
+    return `🧠 **CORTEXIQ Strategic Recommendation**
 
 Based on current data analysis:
 
@@ -428,11 +428,11 @@ Cash declining 12%/month. ₹0.8 Cr stuck in overdue invoices.
 - Supplier X disruption: -₹25-30L if production halts
 - Cash crunch: Could limit growth capacity
 
-**NEXUS recommendation:** Focus on fixing operational issues in Sep-Oct to capture December seasonal demand. December could be your best month ever if supply chain is fixed.`
+**CORTEXIQ recommendation:** Focus on fixing operational issues in Sep-Oct to capture December seasonal demand. December could be your best month ever if supply chain is fixed.`
   }
 
   // DEFAULT — general business intelligence
-  return `🧠 **NEXUS Ω Analysis**
+  return `🧠 **CORTEXIQ Ω Analysis**
 
 I analyzed your question: *"${question}"*
 
@@ -462,11 +462,11 @@ Try asking me something specific like:
 - "Give me a company health summary"`
 }
 
-export default function AskNexusPage() {
+export default function AskCORTEXIQPage() {
   const [messages, setMessages] = useState<Message[]>([
     {
-      role: 'nexus',
-      text: `👋 Hello! I'm **NEXUS Ω**, your AI enterprise intelligence assistant.
+      role: 'CORTEXIQ',
+      text: `👋 Hello! I'm **CORTEXIQ Ω**, your AI enterprise intelligence assistant.
 
 I analyze real business data across Finance, Operations, Sales, Inventory, HR and Suppliers to give you specific, actionable insights.
 
@@ -501,7 +501,7 @@ I analyze real business data across Finance, Operations, Sales, Inventory, HR an
 
     const response = analyzeQuestion(question)
     setMessages(prev => [...prev, {
-      role: 'nexus',
+      role: 'CORTEXIQ',
       text: response,
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     }])
@@ -541,7 +541,7 @@ I analyze real business data across Finance, Operations, Sales, Inventory, HR an
             <span className="text-white text-lg">✨</span>
           </div>
           <div>
-            <h1 className="text-white font-bold">Ask NEXUS</h1>
+            <h1 className="text-white font-bold">Ask CORTEXIQ</h1>
             <p className="text-gray-400 text-xs">AI Decision Intelligence — Analyzing live business data</p>
           </div>
           <div className="ml-auto flex items-center gap-4">
@@ -566,7 +566,7 @@ I analyze real business data across Finance, Operations, Sales, Inventory, HR an
       <div className="flex-1 overflow-y-auto p-6 space-y-4">
         {messages.map((msg, i) => (
           <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} gap-3`}>
-            {msg.role === 'nexus' && (
+            {msg.role === 'CORTEXIQ' && (
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0 mt-1">
                 <span className="text-white text-xs font-bold">N</span>
               </div>
@@ -577,7 +577,7 @@ I analyze real business data across Finance, Operations, Sales, Inventory, HR an
                   ? 'bg-blue-600 text-white rounded-br-sm'
                   : 'bg-[#13131a] border border-[#2a2a3a] rounded-bl-sm'
               }`}>
-                {msg.role === 'nexus' ? renderText(msg.text) : msg.text}
+                {msg.role === 'CORTEXIQ' ? renderText(msg.text) : msg.text}
               </div>
               <span className="text-gray-600 text-xs mt-1">{msg.time}</span>
             </div>
@@ -648,7 +648,7 @@ I analyze real business data across Finance, Operations, Sales, Inventory, HR an
           </button>
         </div>
         <p className="text-gray-600 text-xs mt-2 text-center">
-          NEXUS analyzes live data from Finance, Operations, Sales, HR & Suppliers
+          CORTEXIQ analyzes live data from Finance, Operations, Sales, HR & Suppliers
         </p>
       </div>
     </div>

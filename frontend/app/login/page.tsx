@@ -106,7 +106,7 @@ const C = {
 }
  
 // ── SVG Logo ──────────────────────────────────────────────────────────────────
-function NexusLogo({ size = 26 }: { size?: number }) {
+function CORTEXIQLogo({ size = 26 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 28 28" fill="none">
       <circle cx="14" cy="14" r="12" stroke="#3b82f6" strokeWidth="2" fill="none" />
@@ -313,7 +313,7 @@ export default function AuthPage() {
     if (profile.role !== loginRole) { setLoginError(`This username is not registered as ${loginRole}.`); setLoginLoading(false); return }
     const { data, error: authError } = await supabase.auth.signInWithPassword({ email: profile.email, password: loginPassword })
     if (authError || !data.user) { setLoginError('Invalid username or password.'); setLoginLoading(false); return }
-    localStorage.setItem('nexus_user', JSON.stringify({ name: profile.full_name || username, role: loginRole }))
+    localStorage.setItem('CORTEXIQ_user', JSON.stringify({ name: profile.full_name || username, role: loginRole }))
     if (loginRole === 'ceo') router.push('/dashboard/ceo')
     else if (loginRole === 'ca') router.push('/dashboard/finance')
     else if (loginRole === 'manager') router.push('/dashboard/operations')
@@ -386,10 +386,10 @@ export default function AuthPage() {
         padding: '20px 40px',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <NexusLogo />
+          <CORTEXIQLogo />
           <div>
             <div style={{ fontWeight: 900, fontSize: 20, letterSpacing: '0.08em', color: '#f0f6ff' }}>
-              NEXUS <span style={{ color: '#3b82f6' }}>Ω</span>
+              CORTEXIQ <span style={{ color: '#3b82f6' }}>Ω</span>
             </div>
             <div style={{ fontSize: 9, letterSpacing: '0.22em', color: '#475569' }}>
               DISCOVER · CHALLENGE · IMPROVE
@@ -424,7 +424,7 @@ export default function AuthPage() {
           </h1>
  
           <p style={{ color: '#94a3b8', fontSize: 15, lineHeight: 1.75, marginBottom: 32, maxWidth: 420 }}>
-            NEXUS Ω integrates people, processes, and AI to help organizations
+            CORTEXIQ Ω integrates people, processes, and AI to help organizations
             make safer, faster, and smarter decisions.
           </p>
  
@@ -444,7 +444,7 @@ export default function AuthPage() {
             color: '#94a3b8', fontStyle: 'italic', fontSize: 13, lineHeight: 1.7,
           }}>
             "Better data. Clearer insights. Stronger decisions."
-            <div style={{ color: '#475569', fontStyle: 'normal', fontSize: 11, marginTop: 4 }}>— NEXUS Ω</div>
+            <div style={{ color: '#475569', fontStyle: 'normal', fontSize: 11, marginTop: 4 }}>— CORTEXIQ Ω</div>
           </blockquote>
         </div>
  
@@ -471,9 +471,9 @@ export default function AuthPage() {
             {/* Card header */}
             <div style={{ color: '#94a3b8', fontSize: 13, marginBottom: 3 }}>Welcome to</div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 9, marginBottom: 2 }}>
-              <NexusLogo size={24} />
+              <CORTEXIQLogo size={24} />
               <h2 style={{ fontSize: 24, fontWeight: 800, color: '#f0f6ff', margin: 0 }}>
-                NEXUS <span style={{ color: '#3b82f6' }}>Ω</span>
+                CORTEXIQ <span style={{ color: '#3b82f6' }}>Ω</span>
               </h2>
             </div>
             <p style={{ color: '#64748b', fontSize: 13, margin: '4px 0 24px' }}>Sign in to your account</p>
@@ -576,7 +576,7 @@ export default function AuthPage() {
                     { label: 'Employee', un: 'emp_sara', r: 'employee' },
                   ].map((d) => (
                     <button key={d.label}
-                      onClick={() => { setUsername(d.un); setLoginPassword('nexus123'); setLoginRole(d.r) }}
+                      onClick={() => { setUsername(d.un); setLoginPassword('CORTEXIQ123'); setLoginRole(d.r) }}
                       style={{
                         textAlign: 'left', padding: '8px 10px', borderRadius: 8,
                         border: '1px solid rgba(59,130,246,0.12)',
@@ -593,7 +593,7 @@ export default function AuthPage() {
                 </div>
  
                 <p style={{ textAlign: 'center', fontSize: 12, color: '#475569', marginTop: 20 }}>
-                  New to NEXUS Ω?{' '}
+                  New to CORTEXIQ Ω?{' '}
                   <button onClick={() => setMode('register')} style={{ background: 'none', border: 'none', color: '#3b82f6', fontSize: 12, cursor: 'pointer', fontWeight: 600 }}>
                     Register here
                   </button>
@@ -748,7 +748,7 @@ export default function AuthPage() {
         padding: '14px 40px',
         borderTop: '1px solid rgba(59,130,246,0.08)',
       }}>
-        <span style={{ fontSize: 11, color: '#334155' }}>© 2025 NEXUS Ω. All rights reserved.</span>
+        <span style={{ fontSize: 11, color: '#334155' }}>© 2025 CORTEXIQ Ω. All rights reserved.</span>
         <span style={{ fontSize: 11, color: '#334155' }}>People · Progress · Together</span>
       </footer>
  

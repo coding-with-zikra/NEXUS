@@ -29,7 +29,7 @@ export default function SettingsPage() {
     <div className="p-6 space-y-5 max-w-2xl">
       <div>
         <h1 className="text-2xl font-bold text-white">⚙️ Settings</h1>
-        <p className="text-gray-400 text-sm mt-1">Customize your NEXUS Ω experience.</p>
+        <p className="text-gray-400 text-sm mt-1">Customize your CORTEXIQ Ω experience.</p>
       </div>
 
       {saved && (

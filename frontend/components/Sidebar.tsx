@@ -74,7 +74,7 @@ const ceoNav = [
       { label: 'Contradiction Engine', href: '/dashboard/contradictions' },
       { label: 'Blind-Spot Discovery', href: '/dashboard/intelligence/blind-spots' },
       { label: 'Root-Cause Analysis', href: '/dashboard/intelligence/root-cause' },
-      { label: 'Ask NEXUS', href: '/dashboard/intelligence/ask-nexus' },
+      { label: 'Ask CORTEXIQ', href: '/dashboard/intelligence/ask-CORTEXIQ' },
     ]
   },
   {
@@ -174,7 +174,7 @@ const caNav = [
       { label: 'Why did profit change?', href: '/dashboard/intelligence/root-cause' },
       { label: 'Expense Risk', href: '/dashboard/intelligence/blind-spots' },
       { label: 'Cash Forecast', href: '/dashboard/future-lab' },
-      { label: 'Financial Recommendations', href: '/dashboard/intelligence/ask-nexus' },
+      { label: 'Financial Recommendations', href: '/dashboard/intelligence/ask-CORTEXIQ' },
     ]
   },
   {
@@ -258,7 +258,7 @@ const managerNav = [
       { label: 'Root Cause Analysis', href: '/dashboard/intelligence/root-cause' },
       { label: 'Decision Safety Gate', href: '/dashboard/decision-safety' },
       { label: 'Blind-Spot Discovery', href: '/dashboard/intelligence/blind-spots' },
-      { label: 'Ask NEXUS', href: '/dashboard/intelligence/ask-nexus' },
+      { label: 'Ask CORTEXIQ', href: '/dashboard/intelligence/ask-CORTEXIQ' },
     ]
   },
   {
@@ -359,11 +359,11 @@ const employeeNav = [
     ]
   },
   {
-    label: '🧠 Ask NEXUS', icon: Brain, children: [
-      { label: 'Ask About Attendance', href: '/dashboard/intelligence/ask-nexus' },
-      { label: 'Ask About Salary', href: '/dashboard/intelligence/ask-nexus' },
-      { label: 'Ask About Leave', href: '/dashboard/intelligence/ask-nexus' },
-      { label: 'Ask About Tasks', href: '/dashboard/intelligence/ask-nexus' },
+    label: '🧠 Ask CORTEXIQ', icon: Brain, children: [
+      { label: 'Ask About Attendance', href: '/dashboard/intelligence/ask-CORTEXIQ' },
+      { label: 'Ask About Salary', href: '/dashboard/intelligence/ask-CORTEXIQ' },
+      { label: 'Ask About Leave', href: '/dashboard/intelligence/ask-CORTEXIQ' },
+      { label: 'Ask About Tasks', href: '/dashboard/intelligence/ask-CORTEXIQ' },
     ]
   },
 ]
@@ -482,14 +482,14 @@ export default function Sidebar() {
         })}
       </nav>
 
-      {/* Ask NEXUS + Logout */}
+      {/* Ask CORTEXIQ + Logout */}
       <div className="p-3 border-t border-[#1e1e2e]">
         <Link
-          href="/dashboard/intelligence/ask-nexus"
+          href="/dashboard/intelligence/ask-CORTEXIQ"
           className="w-full flex items-center gap-2 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 text-blue-400 rounded-lg px-3 py-2 text-xs transition-all"
         >
           <Sparkles size={14} />
-          Ask NEXUS
+          Ask CORTEXIQ
         </Link>
         <button
           onClick={handleLogout}

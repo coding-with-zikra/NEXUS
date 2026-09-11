@@ -53,7 +53,7 @@ export default function EmployeeDashboard() {
         </div>
         <div className="relative z-10 hidden md:block text-right">
           <p className="text-blue-300 text-sm italic">"Small steps everyday lead to big results."</p>
-          <p className="text-gray-500 text-xs mt-1">— NEXUS Ω</p>
+          <p className="text-gray-500 text-xs mt-1">— CORTEXIQ Ω</p>
         </div>
       </div>
  
@@ -203,7 +203,7 @@ export default function EmployeeDashboard() {
           </div>
         </div>
  
-        {/* ── Ask NEXUS ── */}
+        {/* ── Ask CORTEXIQ ── */}
         <div
           className="rounded-2xl p-6 border border-blue-500/25"
           style={{ background: 'rgba(15, 23, 48, 0.85)' }}
@@ -216,7 +216,7 @@ export default function EmployeeDashboard() {
               <span className="text-xl">✨</span>
             </div>
             <div>
-              <h2 className="text-white font-semibold text-base">Ask NEXUS</h2>
+              <h2 className="text-white font-semibold text-base">Ask CORTEXIQ</h2>
               <p className="text-gray-500 text-xs">Get instant answers to your work questions.</p>
             </div>
           </div>

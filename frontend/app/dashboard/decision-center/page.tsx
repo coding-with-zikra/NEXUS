@@ -218,7 +218,7 @@ export default function DecisionCenterPage() {
                 selected.aiVerdict.startsWith('CONDITIONAL') ? 'bg-yellow-500/10 border-yellow-500/30' :
                 'bg-red-500/10 border-red-500/30'
               }`}>
-                <h3 className="text-white font-medium text-sm mb-1">🧠 NEXUS AI Verdict</h3>
+                <h3 className="text-white font-medium text-sm mb-1">🧠 CORTEXIQ AI Verdict</h3>
                 <p className={`text-sm font-bold ${
                   selected.aiVerdict.startsWith('APPROVED') ? 'text-green-400' :
                   selected.aiVerdict.startsWith('CONDITIONAL') ? 'text-yellow-400' :

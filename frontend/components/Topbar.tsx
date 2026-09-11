@@ -10,7 +10,7 @@ const SEARCH_ITEMS = [
   { label: 'Decision Contradiction Engine', href: '/dashboard/contradictions', icon: '🧩' },
   { label: 'Decision Safety Gate', href: '/dashboard/decision-safety', icon: '🛡️' },
   { label: 'Root Cause Analysis', href: '/dashboard/intelligence/root-cause', icon: '🔍' },
-  { label: 'Ask NEXUS', href: '/dashboard/intelligence/ask-nexus', icon: '🧠' },
+  { label: 'Ask CORTEXIQ', href: '/dashboard/intelligence/ask-CORTEXIQ', icon: '🧠' },
   { label: 'Future Lab', href: '/dashboard/future-lab', icon: '🔮' },
   { label: 'Decision Center', href: '/dashboard/decision-center', icon: '⚔️' },
   { label: 'Digital Twin', href: '/dashboard/digital-twin', icon: '🌐' },
@@ -109,7 +109,7 @@ export default function Topbar() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             onFocus={() => setShowSearch(true)}
-            placeholder="Ask NEXUS or search anything..."
+            placeholder="Ask CORTEXIQ or search anything..."
             className="bg-transparent text-gray-400 text-sm focus:outline-none flex-1 placeholder-gray-600"
           />
           <span className="text-gray-600 text-xs">Ctrl+K</span>

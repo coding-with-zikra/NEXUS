@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'NEXUS Ω — Decision Intelligence',
+  title: 'CORTEXIQ Ω — Decision Intelligence',
   description: 'Discover. Challenge. Improve.',
 }
 

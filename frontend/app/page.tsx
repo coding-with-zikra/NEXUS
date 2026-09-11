@@ -19,7 +19,7 @@ export default function LandingPage() {
 
   const features = [
     { icon: '📊', title: 'Live Command Center', desc: 'Revenue, cash flow, production and attendance in one real-time view. No more chasing spreadsheets across departments.' },
-    { icon: '🧠', title: 'AI Insights Engine', desc: 'NEXUS Ω reads your data every hour and tells you what changed, what it means, and what to do next — in plain language.' },
+    { icon: '🧠', title: 'AI Insights Engine', desc: 'CORTEXIQ Ω reads your data every hour and tells you what changed, what it means, and what to do next — in plain language.' },
     { icon: '💰', title: 'Finance & GST', desc: 'Invoices, expenses, GST filing status and receivables ageing tracked automatically for your CA team.' },
     { icon: '🏭', title: 'Operations & Inventory', desc: 'Production targets, machine downtime, stock levels and reorder alerts before you run out of material.' },
     { icon: '🕒', title: 'Attendance & HR', desc: 'Daily attendance, leave balances, shift records and performance scores for every employee.' },
@@ -46,7 +46,7 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center font-black text-sm" style={{ background: 'linear-gradient(135deg, #1e90ff, #0052cc)' }}>Ω</div>
-            <span className="font-bold tracking-tight">NEXUS <span className="text-blue-400">Ω</span></span>
+            <span className="font-bold tracking-tight">CORTEXIQ <span className="text-blue-400">Ω</span></span>
           </div>
           <div className="hidden md:flex items-center gap-7 text-sm text-gray-400">
             <a href="#features" className="hover:text-white transition-colors">Features</a>
@@ -84,7 +84,7 @@ export default function LandingPage() {
           </h1>
 
           <p className="mt-5 text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            NEXUS Ω pulls finance, operations, inventory and attendance into a single live dashboard —
+            CORTEXIQ Ω pulls finance, operations, inventory and attendance into a single live dashboard —
             then uses AI to tell you what needs your attention today.
           </p>
 
@@ -172,7 +172,7 @@ export default function LandingPage() {
             {[
               { n: '01', t: 'Create your account', d: 'Sign up, name your company and pick your role. Your workspace is ready instantly.' },
               { n: '02', t: 'Add your team & data', d: 'Invite employees, import invoices and set production targets. Everyone gets the right access level.' },
-              { n: '03', t: 'Let NEXUS Ω watch it', d: 'The AI tracks every metric, flags what is off-track and sends you a weekly summary you will actually read.' },
+              { n: '03', t: 'Let CORTEXIQ Ω watch it', d: 'The AI tracks every metric, flags what is off-track and sends you a weekly summary you will actually read.' },
             ].map((s) => (
               <div key={s.n} className="flex gap-5 bg-[#13131a] border border-[#2a2a3a] rounded-xl p-6">
                 <span className="text-2xl font-black flex-shrink-0" style={{ background: 'linear-gradient(135deg, #1e90ff, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
@@ -206,7 +206,7 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <div className="flex items-center gap-2 text-gray-500">
             <div className="w-6 h-6 rounded-md flex items-center justify-center font-black text-xs" style={{ background: 'linear-gradient(135deg, #1e90ff, #0052cc)' }}>Ω</div>
-            <span>© {new Date().getFullYear()} NEXUS Ω. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} CORTEXIQ Ω. All rights reserved.</span>
           </div>
           <div className="flex items-center gap-6 text-gray-500">
             <Link href="/login" className="hover:text-white transition-colors">Log in</Link>

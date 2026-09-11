@@ -106,7 +106,7 @@ export default function CEODashboard() {
           </button>
           <div className="text-right hidden md:block">
             <p className="text-blue-300 text-sm italic">"Better data. Bolder decisions."</p>
-            <p className="text-gray-500 text-xs mt-1">— NEXUS Ω</p>
+            <p className="text-gray-500 text-xs mt-1">— CORTEXIQ Ω</p>
           </div>
         </div>
       </div>
@@ -131,7 +131,7 @@ export default function CEODashboard() {
           ))}
         </div>
  
-        {/* ── NEXUS AI — Critical Insight ── */}
+        {/* ── CORTEXIQ AI — Critical Insight ── */}
         <div
           className="rounded-2xl p-6 border border-blue-500/25"
           style={{ background: 'rgba(15, 23, 48, 0.85)' }}
@@ -145,7 +145,7 @@ export default function CEODashboard() {
               <span className="text-xl">🧠</span>
             </div>
             <div>
-              <h2 className="text-white font-semibold text-base">NEXUS AI — Critical Insight</h2>
+              <h2 className="text-white font-semibold text-base">CORTEXIQ AI — Critical Insight</h2>
               <p className="text-gray-500 text-xs">AI-powered executive intelligence</p>
             </div>
           </div>

@@ -124,7 +124,7 @@ export default function RootCausePage() {
     <div className="p-6 space-y-5">
       <div>
         <h1 className="text-2xl font-bold text-white">🔍 Root Cause Analysis</h1>
-        <p className="text-gray-400 text-sm mt-1">NEXUS traces problems to their actual root cause — not just symptoms, but the real underlying issue with actual data.</p>
+        <p className="text-gray-400 text-sm mt-1">CORTEXIQ traces problems to their actual root cause — not just symptoms, but the real underlying issue with actual data.</p>
       </div>
 
       <div className="bg-[#13131a] border border-[#2a2a3a] rounded-xl p-6">
@@ -157,7 +157,7 @@ export default function RootCausePage() {
       {result && (
         <>
           <div className="bg-[#13131a] border border-blue-500/30 rounded-xl p-5">
-            <h2 className="text-white font-semibold mb-2">🧠 NEXUS Analysis — {result.title}</h2>
+            <h2 className="text-white font-semibold mb-2">🧠 CORTEXIQ Analysis — {result.title}</h2>
             <p className="text-gray-300 text-sm">{result.summary}</p>
           </div>
 

@@ -220,7 +220,7 @@ export default function FutureLabPage() {
     <div className="p-6 space-y-5">
       <div>
         <h1 className="text-2xl font-bold text-white">🔮 Future Lab — What-If Simulator</h1>
-        <p className="text-gray-400 text-sm mt-1">Simulate decisions before you make them. NEXUS calculates financial impact using real business data.</p>
+        <p className="text-gray-400 text-sm mt-1">Simulate decisions before you make them. CORTEXIQ calculates financial impact using real business data.</p>
       </div>
 
       <div className="bg-[#13131a] border border-[#2a2a3a] rounded-xl p-6">
@@ -329,7 +329,7 @@ export default function FutureLabPage() {
 
           {bestOption && (
             <div className="bg-[#13131a] border border-green-500/30 rounded-xl p-5">
-              <h2 className="text-white font-semibold mb-2">🧠 NEXUS Recommendation</h2>
+              <h2 className="text-white font-semibold mb-2">🧠 CORTEXIQ Recommendation</h2>
               <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
                 <p className="text-green-300 text-sm font-medium mb-2">⭐ Best Option: {bestOption.name}</p>
                 <p className="text-gray-300 text-sm">

@@ -129,7 +129,7 @@ export default function DecisionSafetyPage() {
     <div className="p-6 space-y-5">
       <div>
         <h1 className="text-2xl font-bold text-white">🛡️ Decision Safety Gate</h1>
-        <p className="text-gray-400 text-sm mt-1">NEXUS validates data quality, completeness and evidence strength before any major decision.</p>
+        <p className="text-gray-400 text-sm mt-1">CORTEXIQ validates data quality, completeness and evidence strength before any major decision.</p>
       </div>
 
       <div className="bg-[#13131a] border border-[#2a2a3a] rounded-xl p-6">
@@ -254,7 +254,7 @@ export default function DecisionSafetyPage() {
           </div>
 
           <div className="bg-[#13131a] border border-green-500/20 rounded-xl p-5">
-            <h2 className="text-white font-semibold mb-2">🧠 NEXUS Recommendation</h2>
+            <h2 className="text-white font-semibold mb-2">🧠 CORTEXIQ Recommendation</h2>
             <p className="text-gray-300 text-sm">{result.recommendation}</p>
           </div>
 

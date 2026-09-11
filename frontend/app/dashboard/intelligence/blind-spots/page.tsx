@@ -127,7 +127,7 @@ export default function BlindSpotsPage() {
       <div>
         <h1 className="text-2xl font-bold text-white">👁️ Blind Spot Discovery</h1>
         <p className="text-gray-400 text-sm mt-1">
-          NEXUS scans across all departments to find hidden risks that normal dashboards don't show.
+          CORTEXIQ scans across all departments to find hidden risks that normal dashboards don't show.
         </p>
       </div>
 
@@ -139,7 +139,7 @@ export default function BlindSpotsPage() {
           </div>
           <h2 className="text-white font-semibold text-lg mb-2">Run Blind Spot Scan</h2>
           <p className="text-gray-400 text-sm mb-6 max-w-md mx-auto">
-            NEXUS will analyze data across Finance, Operations, Sales, Inventory, HR and Suppliers
+            CORTEXIQ will analyze data across Finance, Operations, Sales, Inventory, HR and Suppliers
             to find hidden risks and patterns you may have missed.
           </p>
           <button

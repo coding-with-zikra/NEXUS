@@ -133,7 +133,7 @@ function analyzeDecision(decision: string) {
       { dept_a: 'Finance', dept_b: 'Operations', type: 'Resources vs Execution', severity: 'high', a_says: 'Cash constraints limit investment capacity.', b_says: 'Operational improvements needed regardless of investment.' },
       { dept_a: 'Inventory', dept_b: 'Sales', type: 'Supply vs Demand', severity: 'medium', a_says: 'Supply chain fragile — cannot commit to new demand.', b_says: 'Market opportunity exists and should be captured.' }
     ],
-    aiSummary: `NEXUS detected **2 conflicts** in your decision. The primary tension is between financial constraints (cash declining 12%/month) and growth opportunities (12% revenue growth, 7,440 units unmet demand). Before proceeding, address: (1) Machine #04 repair — costs ₹4.2L but prevents ₹18L+ losses, (2) Supplier X — switch to Supplier Y to stabilize supply, (3) Collect ₹0.8 Cr overdue invoices to strengthen cash position. Overall Decision Readiness: 55/100 — resolve operational issues first.`
+    aiSummary: `CORTEXIQ detected **2 conflicts** in your decision. The primary tension is between financial constraints (cash declining 12%/month) and growth opportunities (12% revenue growth, 7,440 units unmet demand). Before proceeding, address: (1) Machine #04 repair — costs ₹4.2L but prevents ₹18L+ losses, (2) Supplier X — switch to Supplier Y to stabilize supply, (3) Collect ₹0.8 Cr overdue invoices to strengthen cash position. Overall Decision Readiness: 55/100 — resolve operational issues first.`
   }
 }
 
@@ -155,7 +155,7 @@ export default function ContradictionsPage() {
     <div className="p-6 space-y-5">
       <div>
         <h1 className="text-2xl font-bold text-white">🧩 Decision Contradiction Engine</h1>
-        <p className="text-gray-400 text-sm mt-1">NEXUS analyzes your decision against real Finance, Production, Inventory and Sales data to find conflicts.</p>
+        <p className="text-gray-400 text-sm mt-1">CORTEXIQ analyzes your decision against real Finance, Production, Inventory and Sales data to find conflicts.</p>
       </div>
 
       {/* Input */}
@@ -278,7 +278,7 @@ export default function ContradictionsPage() {
 
           {/* AI Summary */}
           <div className="bg-[#13131a] border border-purple-500/30 rounded-xl p-5">
-            <h2 className="text-white font-semibold mb-3">🧠 NEXUS Analysis</h2>
+            <h2 className="text-white font-semibold mb-3">🧠 CORTEXIQ Analysis</h2>
             <p className="text-gray-300 text-sm leading-relaxed">{result.aiSummary}</p>
           </div>
 

@@ -49,7 +49,7 @@ export default function ManagerDashboard() {
         </div>
         <div className="relative z-10 hidden md:block text-right">
           <p className="text-blue-300 text-sm italic">"Great teams build extraordinary results."</p>
-          <p className="text-gray-500 text-xs mt-1">— NEXUS Ω</p>
+          <p className="text-gray-500 text-xs mt-1">— CORTEXIQ Ω</p>
         </div>
       </div>
  
@@ -94,7 +94,7 @@ export default function ManagerDashboard() {
           </div>
         </div>
  
-        {/* NEXUS AI — Department Insight */}
+        {/* CORTEXIQ AI — Department Insight */}
         <div className="rounded-2xl p-6 border border-blue-500/25" style={{ background: 'rgba(15,23,48,0.85)' }}>
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
@@ -102,7 +102,7 @@ export default function ManagerDashboard() {
               <span className="text-xl">🧠</span>
             </div>
             <div>
-              <h2 className="text-white font-semibold text-base">NEXUS AI — Department Insight</h2>
+              <h2 className="text-white font-semibold text-base">CORTEXIQ AI — Department Insight</h2>
               <p className="text-gray-500 text-xs">AI-powered operations intelligence</p>
             </div>
           </div>

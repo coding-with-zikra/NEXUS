@@ -34,7 +34,7 @@ export default function ProfilePage() {
         })
       }
       // Check for saved photo in localStorage
-      const savedPhoto = localStorage.getItem('nexus_profile_photo')
+      const savedPhoto = localStorage.getItem('CORTEXIQ_profile_photo')
       if (savedPhoto) setPhotoUrl(savedPhoto)
     })
   }, [])
@@ -47,7 +47,7 @@ export default function ProfilePage() {
     reader.onload = (event) => {
       const dataUrl = event.target?.result as string
       setPhotoUrl(dataUrl)
-      localStorage.setItem('nexus_profile_photo', dataUrl)
+      localStorage.setItem('CORTEXIQ_profile_photo', dataUrl)
       setUploadLoading(false)
     }
     reader.readAsDataURL(file)
@@ -55,7 +55,7 @@ export default function ProfilePage() {
 
   const removePhoto = () => {
     setPhotoUrl(null)
-    localStorage.removeItem('nexus_profile_photo')
+    localStorage.removeItem('CORTEXIQ_profile_photo')
   }
 
   const handleSave = async () => {
