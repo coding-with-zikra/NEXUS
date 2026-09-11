@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.api.ai import router as ai_router   # ← ADD THIS LINE
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from ai.contradiction_engine import analyze_contradictions
@@ -12,6 +13,8 @@ app = FastAPI(
     description="AI-powered enterprise decision intelligence platform",
     version="1.0.0"
 )
+
+app.include_router(ai_router)
 
 # CORS — allows Next.js frontend to call this API
 app.add_middleware(
