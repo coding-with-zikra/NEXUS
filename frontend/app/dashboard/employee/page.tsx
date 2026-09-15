@@ -154,7 +154,7 @@ export default function EmployeeDashboard() {
             </div>
  
             <button
-              onClick={() => setCheckedIn(!checkedIn)}
+              onClick={() => router.push('/dashboard/employee/attendance')}
               className="w-full py-2.5 text-sm font-bold text-white rounded-xl transition-all hover:brightness-110"
               style={{ background: 'linear-gradient(135deg, #1e90ff, #0052cc)' }}
             >

@@ -44,7 +44,7 @@ export default function Topbar() {
   const router = useRouter()
   const supabase = createClient()
   const [userName, setUserName] = useState('User')
-  const [userRole, setUserRole] = useState('CEO')
+  const [userRole, setUserRole] = useState('')
   const [time, setTime] = useState('')
   const [search, setSearch] = useState('')
   const [showSearch, setShowSearch] = useState(false)
@@ -63,7 +63,7 @@ export default function Topbar() {
       const { data: profile } = await supabase
         .from('profiles').select('full_name, role').eq('id', user.id).single()
       if (profile?.full_name) setUserName(profile.full_name.split(' ')[0])
-      const role = meta?.role || profile?.role || 'employee'
+      const role = profile?.role || meta?.role || 'employee'
       setUserRole(
         role === 'ceo' ? 'CEO' :
         role === 'ca' ? 'CA / Finance' :

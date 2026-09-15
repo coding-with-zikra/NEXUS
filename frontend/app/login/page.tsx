@@ -307,9 +307,12 @@ export default function AuthPage() {
     if (!username || username.length < 3) { setLoginError('Enter your username'); setLoginLoading(false); return }
     if (!loginPassword) { setLoginError('Enter your password'); setLoginLoading(false); return }
     if (!loginRole) { setLoginError('Select your role'); setLoginLoading(false); return }
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/lookup/${username.toLowerCase().trim()}`)
-    const profile = await res.json()
-    if (!profile.found) { setLoginError('Username not found.'); setLoginLoading(false); return }
+        const { data: profile, error: lookupError } = await supabase
+      .from('profiles')
+      .select('email, role, full_name')
+      .eq('username', username.toLowerCase().trim())
+      .single()
+    if (lookupError || !profile) { setLoginError('Username not found.'); setLoginLoading(false); return }
     if (profile.role !== loginRole) { setLoginError(`This username is not registered as ${loginRole}.`); setLoginLoading(false); return }
     const { data, error: authError } = await supabase.auth.signInWithPassword({ email: profile.email, password: loginPassword })
     if (authError || !data.user) { setLoginError('Invalid username or password.'); setLoginLoading(false); return }

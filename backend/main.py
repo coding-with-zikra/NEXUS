@@ -9,7 +9,7 @@ import os
 load_dotenv()
 
 app = FastAPI(
-    title="NEXUS Ω API",
+    title="CortexIQ Ω API",
     description="AI-powered enterprise decision intelligence platform",
     version="1.0.0"
 )
